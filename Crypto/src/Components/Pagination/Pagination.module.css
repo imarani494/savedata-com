@@ -1,0 +1,62 @@
+.mainPaginationBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginationBox {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 18px;
+}
+
+.paginationBox > button {
+  border: 1px solid whitesmoke;
+  padding: 10px 15px;
+  border-radius: 5px;
+  min-width: 30px;
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    
+    transform: scale(1.2);
+    transition: all 0.3s ease-in;
+    border: 1px solid whitesmoke;
+  }
+}
+
+
+@media (min-width: 540px) and (max-width: 780px) {
+  .paginationBox {
+    margin: 30px;
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .paginationBox > button {
+    height: 43px;
+    width: 43px;
+  }
+}
+
+
+@media (min-width: 100px) and (max-width: 540px) {
+  .paginationBox {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 50%;
+  }
+
+  .paginationBox > button {
+    height: 38px;
+    width: 38px;
+  }
+}
