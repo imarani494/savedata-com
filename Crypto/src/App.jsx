@@ -97,7 +97,7 @@ const App = () => {
     return cryptonite.findIndex((crypt) => crypt.id === id);
   }
 
-  // Handle reCAPTCHA verification
+ 
   function handleRecaptcha(value) {
     console.log("reCAPTCHA success:", value);
     setRecaptchaVerified(true);
@@ -107,17 +107,17 @@ const App = () => {
     <div className="container">
       <Navbar searchValuefn={searchValuefn} />
 
-      {/* Display reCAPTCHA only if not verified */}
+   
       {!recaptchaVerified && (
   <div className="recaptcha-container">
     <ReCAPTCHA
-      sitekey="6Lc_qJMqAAAAAFCfC5BispsW6n5-re3xPn5DFUje"
+    sitekey="6LcOe4sqAAAAAMtgpNIcCSFPuFrkVQ6qPrLsYNBC" 
       onChange={handleRecaptcha}
     />
   </div>
 )}
 
-      {/* Show content only after reCAPTCHA is verified */}
+     
       {recaptchaVerified && (
         <>
           {loading ? <div className="loading">Loading...</div> : null} {/* Show loading indicator if loading is true */}
